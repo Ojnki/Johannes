@@ -10,7 +10,7 @@
     <form action="resultat.php">
 
         <label for="tall">skriv tall for å se gangetabell</label>
-        <input type="text" name = "tall">
+        <input type="text" name = "tall"> <!-- Lærer: Bruk type="number" -->
         <input type="submit" name = "submit1">
 
 

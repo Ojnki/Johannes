@@ -71,3 +71,5 @@ echo "prisen for alle sammen er $totalpris kr";
     </form>
 </body>
 </html>
+
+<!-- Lærer: Bra løsning, Johannes! -->

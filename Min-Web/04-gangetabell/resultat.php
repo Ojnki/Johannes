@@ -46,6 +46,8 @@ while ($counter < 9)
     echo "$resultat <br>";
     }
 
+
+// Lærer: Denne løsningen fungerer fint!    
 ?>
 
 

@@ -19,11 +19,11 @@ elseif ($alder2 > $alder)
 
 
 
-if ($alder < $alder2)
+if ($alder < $alder2) // Lærer: Er ikke denne testen like en test du har over?
     {
        $result = "$fornavn2 er $alderdiff år eldre enn $fornavn";
     }
-elseif ($alder2 < $alder)
+elseif ($alder2 < $alder) // Lærer: Er ikke denne testen også like en test du har over?
     {
         $result = "$fornavn er $alderdiff år eldre enn $fornavn2";
     }
@@ -53,3 +53,5 @@ echo $result;
 </h2> 
 </body>
 </html>
+
+<!-- Lærer: Løsningen din fungerer! -->
