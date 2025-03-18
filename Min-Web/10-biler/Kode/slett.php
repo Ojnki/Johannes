@@ -25,31 +25,31 @@ if($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['regnr']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>rediger bil</title>
+    <title>Slett bil</title>
 </head>
 <body>
     <?php include "meny.php";?>
     <header>
-        <p>Rediger bil</p>
+        <p>Slett bil</p>
     </header>
     <main>
-        <form action="rediger_bekreft.php" method="post">
+        <form action="slett_bekreft.php" method="post">
             <label for="regnr">Registreringsnummer: </label><br><br>
             <input type="text" name="regnr" value="<?php echo $bil['regnr']; ?>" readonly required><br><br>
 
             <label for="merke">Merke: </label><br><br>
-            <input type="text" name="merke" value="<?php echo $bil['merke']; ?>" required><br><br>
+            <input type="text" name="merke" value="<?php echo $bil['merke']; ?>" readonly required><br><br>
 
             <label for="type">Type: </label><br><br>
-            <input type="text" name="type" value="<?php echo $bil['type']; ?>" required><br><br>
+            <input type="text" name="type" value="<?php echo $bil['type']; ?>" readonly required><br><br>
 
             <label for="farge">Farge: </label><br><br>
-            <input type="text" name="farge" value="<?php echo $bil['farge']; ?>" required><br><br>
+            <input type="text" name="farge" value="<?php echo $bil['farge']; ?>" readonly required><br><br>
 
             <label for="aar">År: </label><br><br>
-            <input type="text" name="aar" value="<?php echo $bil['aar']; ?>" required><br><br>
+            <input type="text" name="aar" value="<?php echo $bil['aar']; ?>" readonly required><br><br>
 
-            <input type="submit" name="rediger_bil" value="Lagre endringer">
+            <input id="slett" type="submit" name="Slett_bil" value="Slett">
         </form>
     </main>
   

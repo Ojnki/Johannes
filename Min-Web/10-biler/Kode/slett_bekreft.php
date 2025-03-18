@@ -3,22 +3,16 @@
 //Koble til databasen
 include "connect.php";
 
-if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['ny_bil']))
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['Slett_bil']))
     {
     $regnr = $_POST['regnr'];
-    $merke = $_POST['merke'];
-    $type = $_POST['type'];
-    $farge = $_POST['farge'];
-    $aar = $_POST['aar'];
 
-    $query = "INSERT INTO biler (regnr,merke,type,farge,aar) VALUE
-    (:regnr,:merke,:type,:farge,:aar)";
+
+    $query = "DELETE FROM biler WHERE regnr = :regnr";
+    
+    
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":regnr",$regnr);
-    $stmt->bindParam(":merke",$merke);
-    $stmt->bindParam(":type",$type);
-    $stmt->bindParam(":farge",$farge);
-    $stmt->bindParam(":aar",$aar);
     $stmt->execute();
     }
     else
@@ -32,22 +26,22 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['ny_bil']))
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="./CSS/style.css">
-            <title>Min_Bil</title>
+            <title>Slett bil</title>
         </head>
         <body>
             <?php include "meny.php";?>
         <header>
-        <p>register ny bil</p>
+        <p>Slett bil</p>
         </header>
             <main>
             <?php
             if($stmt)
             {
-                echo "Bilen er blitt lagt til";
+                echo "Bilen er blitt Slettet";
             }
             else
             {
-                echo "det oppstod en feil";
+                echo "FEIL Bilen er ikke Slettet";
             }
             ?>
             </main>

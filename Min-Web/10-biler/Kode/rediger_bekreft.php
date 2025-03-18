@@ -36,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['rediger_bil']))
             <title>Rediger</title>
         </head>
         <body>
+            <?php include "meny.php";?>
         <header>
         <p>Oppdater bil</p>
         </header>

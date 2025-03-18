@@ -7,6 +7,7 @@
     <title>Registrer ny bil</title>
 </head>
 <body>
+    <?php include "meny.php";?>
     <header>
         <p>Registrer ny bil</p>
     </header>
